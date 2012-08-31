@@ -1,0 +1,62 @@
+Editing:
+
+1. Open pi.PiSequential. The code is pretty garbled. 
+Try clicking CTRL-SHIFT-F ("Format"). If it doesn't work, it is because of the errors.
+Try it again after following the instructions below to fix the errors.
+
+2. You can quickly comment/uncomment using CTRL-SHIFT-/ ("Toggle comments"). 
+Uncomment the "if" statement. 
+3. Also, delete a line by Ctrl-D. Delete the "notNeededAnymore()" line.
+
+
+Understanding:
+
+4. This class only contains one method. How does it fit into the overall program?
+Ctrl-click on any class/type or any method invocation to get to its declaration 
+or implementation. 
+	-> 	Try going to the PiApproximation interface declaration.
+
+5. Now, let's find out whether there are any other classes implementing 
+PiApproximation. 
+	-> 	Ctrl-T ("Quick type hierarchy") while with the cursor over the name.
+
+6. Go back to PiSequential.
+	-> You can move quicker through the code by using the Ctrl-Shift-R ("Go to resource")
+	or Ctrl-Shift-T ("Go to type").
+
+7. The class seems like a dead end. How it is used in the
+	program? 
+	-> 	Ctrl-Shift-G on element to search for all occurrences of this class throughout 
+		the workspace. You can do this with any Java element.
+
+8. We're now in the Driver class. Let's have a quick overview of the class. 
+	-> 	Ctrl-O to see a list of the class's fields and methods. Ctrl-O again
+		to also see the fields and methods of all ancestors. Teco search through the list,
+		just type part of the name of a Java element.
+
+9. Hover over any Java element to see its javadoc.
+	-> Try it.
+
+Semantic editing:
+	
+9. There is still lots of "red" in this file. It seems the rand variable is not declared.
+	-> Go to the assignment to rand and Ctrl-1 ("Quick fix"). Create the local variable.
+	Ctrl-1 is probably the most versatile shortcut in Eclipse. Try it whenever you 
+	encounter a warning or error. 
+	Also, try it... any time you feel like the IDE should help you :)
+	
+10. Seems like there is still one more problem. y's initialization is broken. 
+	-> Ctrl-space at the end of "rand" to auto-complete.
+	
+11. When trying a more complex refactoring, first check whether it is available in the refactoring menu.
+	-> Right-click on any Java element. The context-sensitive refactoring menu is somewhere in the middle.
+	
+Misc:
+
+12. Eclipse remembers a history of the modification you make in the code. It resembles a versioning system by 
+doesn't require explicit commits.
+	-> Right-click on any file to activate the context menu and select "Compare with...Local History..." to show
+	previous edits of the file.
+
+13. Eclipse also remembers a history of the changes made through its refactoring engine.
+	-> While in a Java file, go to the top level "Refactor" menu and click on the last menu item, "History...".
