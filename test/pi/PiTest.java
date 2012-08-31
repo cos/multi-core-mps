@@ -22,6 +22,11 @@ public class PiTest {
 	private static long sequentialRuntime;
 	private static final int ITERATIONS = 20000000;
 	
+	@Test
+	public void testSequential() throws Exception {
+		test("Sequential version", new PiSequential());
+	}
+	
 	protected void test(String version,
 			final PiApproximation piApproximation) throws Exception {
 
