@@ -27,9 +27,13 @@ public class PiTest {
 	public void testSequential() throws Exception {
 		test("Sequential version", new PiSequential());
 	}
-	
-	protected void test(String version,
-			final PiApproximation piApproximation) throws Exception {
+
+	@Test
+	public void testThreads() throws Exception {
+		test("Threads version", new PiThreads());
+	}
+	protected void test(String version, final PiApproximation piApproximation)
+			throws Exception {
 
 		System.out.println(version);
 		System.out.println("-----------------------------");
