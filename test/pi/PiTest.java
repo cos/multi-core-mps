@@ -13,9 +13,9 @@ import util.UnimplementedExercise;
 /**
  * Tests for PiApproximation implementations.
  * 
- * The tests run all implementations and report, for each of them, the
- * speedup and the approximation. The reported values are obtained after
- * executing two {@link #warmup(PiApproximation)} runs.
+ * The tests run all implementations and report, for each of them, the speedup
+ * and the approximation. The reported values are obtained after executing two
+ * {@link #warmup(PiApproximation)} runs.
  */
 
 public class PiTest {
