@@ -20,9 +20,9 @@ import util.UnimplementedExercise;
 
 public class PiTest {
 	private static final double PI = 3.141592653589793238462643383279D;
-	private static long sequentialRuntime;
 	private static final int ITERATIONS = 20000000;
-	
+	private static long sequentialRuntime = 0;
+
 	@Test
 	public void testSequential() throws Exception {
 		test("Sequential version", new PiSequential());
@@ -62,7 +62,7 @@ public class PiTest {
 					System.out.println("Live value: "
 							+ ((LiveValue) piApproximation).liveValue());
 				}
-			}, 500);
+			}, sequentialRuntime == 0 ? 500 : sequentialRuntime);
 		}
 		double pi = piApproximation.computePi(ITERATIONS);
 		StopWatch.stop();
