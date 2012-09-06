@@ -111,6 +111,10 @@ public class BlenderTest extends JFrame {
 		infoPanel.add(getPanelFor("Sequential", sequentialBlender));
 
 
+		// Pool
+		Blender poolBlender = new BlenderPool(img1, img2, resultBuffer,
+				resultImageSource);
+		infoPanel.add(getPanelFor("Thread pool", poolBlender));
 		return infoPanel;
 	}
 
