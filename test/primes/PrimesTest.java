@@ -21,6 +21,11 @@ public class PrimesTest {
 	public void testSequential() throws Exception {
 		test("Sequential version", new PrimesSequential());
 	}
+	
+	@Test
+	public void testThreads() throws Exception {
+		test("Threads version", new PrimesThreads());
+	}
 
 	private void test(String version, PrimesComputation p)
 			throws Exception {
