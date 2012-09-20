@@ -17,7 +17,7 @@ public class BlenderForkJoin extends Blender {
 	@Override
 	public void process() {
 		ForkJoinPool forkJoinPool = new ForkJoinPool();
-		forkJoinPool.execute(new BlenderTask(0, height));
+		forkJoinPool.invoke(new BlenderTask(0, height));
 	}
 
 	class BlenderTask extends RecursiveAction {
