@@ -33,8 +33,10 @@ public class BlenderForkJoin extends Blender {
 		@Override
 		public void compute() {
 			if (to - from > 1000) {
-				invokeAll(new BlenderTask(from, (to + from) / 2),
-						new BlenderTask((to + from) / 2, to));
+				BlenderTask forkedTask = new BlenderTask(from, (to + from) / 2);
+				forkedTask.fork();
+				(new BlenderTask((to + from) / 2, to)).compute();
+				forkedTask.join();
 				return;
 			}
 
