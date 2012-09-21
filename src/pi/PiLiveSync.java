@@ -14,8 +14,7 @@ import util.UnimplementedExercise;
 /*
  Steps:
  
- 1. Copy your or the given solution to PiLive to the class below. We keep the
-	original so that we can compare results.
+ 1. Copy your PiLive solution to the class below.
 
  2. Fix the races using synchronization.
  */
