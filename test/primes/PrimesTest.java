@@ -41,6 +41,11 @@ public class PrimesTest {
 	public void testParallel() throws Exception {
 		test("Pool version", new PrimesParallel());
 	}
+	
+	@Test
+	public void testLive() throws Exception {
+		test("Live version", new PrimesLive());
+	}
 
 	private void test(String version, PrimesComputation p)
 			throws Exception {

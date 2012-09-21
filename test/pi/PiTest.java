@@ -32,6 +32,11 @@ public class PiTest {
 	public void testThreads() throws Exception {
 		test("Threads version", new PiThreads());
 	}
+
+	@Test
+	public void testLive() throws Exception {
+		test("Live version", new PiLive());
+	}
 	protected void test(String version, final PiApproximation piApproximation)
 			throws Exception {
 
