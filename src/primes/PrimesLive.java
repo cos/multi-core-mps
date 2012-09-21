@@ -45,7 +45,7 @@ public class PrimesLive extends PrimesComputation implements
 	 * This method can be invoked at any time from outside the PrimesLive object.
 	 */
 	@Override
-	public Integer[] getResults() {
+	public Integer[] getPrimes() {
 		// TODO implement this method
 		return null;
 	}
@@ -55,7 +55,7 @@ public class PrimesLive extends PrimesComputation implements
 	 * This method can be invoked at any time from outside the PrimesLive object.
 	 */
 	@Override
-	public int resultsCount() {
+	public int primesCount() {
 		// TODO implement this method
 		return 0;
 	}

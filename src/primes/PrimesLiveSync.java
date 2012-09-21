@@ -20,13 +20,13 @@ public class PrimesLiveSync extends PrimesComputation implements
 	}
 
 	@Override
-	public Integer[] getResults() {
+	public Integer[] getPrimes() {
 		// TODO implement this method
 		return null;
 	}
 
 	@Override
-	public int resultsCount() {
+	public int primesCount() {
 		// TODO implement this method
 		return 0;
 	}

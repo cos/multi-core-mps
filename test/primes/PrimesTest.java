@@ -85,7 +85,7 @@ public class PrimesTest {
 		Assert.assertEquals(NO_PRIMES_UP_TO, numberOfPrimes);
 		if (p instanceof LiveResults)
 			System.out.println("# live primes: "
-					+ ((LiveResults<?>) p).resultsCount());
+					+ ((LiveResults<?>) p).primesCount());
 		StopWatch.log("Time: ");
 		if (resetReference || referenceRuntime == 0)
 			referenceRuntime = StopWatch.getRuntime();
