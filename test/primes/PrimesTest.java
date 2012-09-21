@@ -46,6 +46,11 @@ public class PrimesTest {
 	public void testLive() throws Exception {
 		test("Live version", new PrimesLive());
 	}
+	
+	@Test
+	public void testLiveSync() throws Exception {
+		test("Live with sync version", new PrimesLiveSync());
+	}
 
 	private void test(String version, PrimesComputation p)
 			throws Exception {
