@@ -59,12 +59,12 @@ public class PrimesLive extends PrimesComputation implements
 	}
 
 	@Override
-	public Integer[] getResults() {
+	public Integer[] getPrimes() {
 		return livePrimes;
 	}
 
 	@Override
-	public int resultsCount() {
+	public int primesCount() {
 		return noLivePrimes;
 	}
 }
