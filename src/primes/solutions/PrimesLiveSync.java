@@ -7,8 +7,8 @@ import java.util.concurrent.TimeUnit;
 import primes.LiveResults;
 import primes.PrimesComputation;
 
-
-public class PrimesLiveSync extends PrimesComputation implements LiveResults<Integer[]> {
+public class PrimesLiveSync extends PrimesComputation implements
+		LiveResults<Integer[]> {
 
 	Integer[] livePrimes;
 	Integer noLivePrimes;
@@ -49,13 +49,10 @@ public class PrimesLiveSync extends PrimesComputation implements LiveResults<Int
 			for (int x = from; x < to; x++) {
 				a[x] = isPrime(x);
 				if (a[x]) {
-					int tmp;
 					synchronized (livePrimes) {
-						tmp = noLivePrimes;
-						noLivePrimes = tmp + 1;
+						livePrimes[noLivePrimes] = x;
+						noLivePrimes++;
 					}
-					livePrimes[tmp] = x;
-
 				}
 			}
 		}
