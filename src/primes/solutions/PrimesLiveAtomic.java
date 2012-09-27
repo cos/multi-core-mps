@@ -12,6 +12,7 @@ import primes.PrimesComputation;
 public class PrimesLiveAtomic extends PrimesComputation implements LiveResults<Integer[]> {
 
 	Integer[] livePrimes;
+	volatile boolean flush;
 
 	@Override
 	public Boolean[] computePrimes(int upto) throws InterruptedException {
@@ -52,18 +53,21 @@ public class PrimesLiveAtomic extends PrimesComputation implements LiveResults<I
 				if (a[x]) {
 					int tmp = noLivePrimes.getAndIncrement();
 					livePrimes[tmp] = x;
+					flush = true;
 				}
 			}
 		}
 	}
 
 	@Override
-	public Integer[] getResults() {
+	public Integer[] getPrimes() {
+		boolean x = flush;
 		return livePrimes;
 	}
 
 	@Override
-	public int resultsCount() {
+	public int primesCount() {
+		boolean x  = flush;
 		return noLivePrimes.intValue();
 	}
 
