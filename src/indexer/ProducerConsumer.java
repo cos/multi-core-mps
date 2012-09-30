@@ -133,7 +133,7 @@ public class ProducerConsumer {
 	
 	public static void main(String[] args) {
 		File[] files = new File[1];
-		files[0] = new File("data");
+		files[0] = new File("resources/data");
 		StopWatch.start();
 		startIndexing(files);
 		StopWatch.stop();
