@@ -111,8 +111,6 @@ public class ProducerConsumer {
 									.newSetFromMap(new ConcurrentHashMap<File, Boolean>());
 							index.put(token, set);
 						}
-						Set<File> set = index.get(token);
-						set.add(file);
 					}
 				}
 			} catch (FileNotFoundException e) {
