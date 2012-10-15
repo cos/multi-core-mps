@@ -3,6 +3,8 @@ package chatroom;
 import java.util.HashMap;
 import java.util.Map;
 
+import edu.illinois.imunit.IMUnit;
+
 /**
  * This example is a part of a chat room application. The example only covers
  * two scenarios, "join chat room" and "change password".
@@ -17,6 +19,8 @@ public class ChatRoom {
 	public boolean joinRoom(String nickname, String userName, String password) {
 		UserProfile userProfile = new UserProfile(userName, password);
 		if (!occupants.containsKey(nickname)) {
+			IMUnit.fireEvent("a");
+			IMUnit.fireEvent("b");
 			occupants.put(nickname, userProfile);
 			return true;
 		}
