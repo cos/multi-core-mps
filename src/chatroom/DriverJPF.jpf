@@ -1,0 +1,13 @@
+#Target class
+#target=chatroom.DriverJPF
+
+
+#Target class
+target=chatroom.DriverJPF
+shell=.shell.basicshell.BasicShell
+listener=gov.nasa.jpf.listener.PreciseRaceDetector
+shell.panels+=,searchgraph
+cg.threads.break_arrays=true
+search.multiple_errors=true
+vm.por.field_boundaries.never=
+report.console.property_violation = error,trace
